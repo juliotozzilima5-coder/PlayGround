@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101d22">
+  <title>Onze — Manager de Futebol</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#inicio" aria-label="Onze início"><span class="brand-mark">11</span><span>ONZE<span class="brand-period">.</span><small>FOOTBALL MANAGER</small></span></a>
+      <div class="club-mini"><div class="club-crest">AV</div><div><b>Atlético do Vale</b><span>Série C · Brasil</span></div><span class="more">⌄</span></div>
+      <div class="nav-label">MENU PRINCIPAL</div>
+      <nav class="side-nav" aria-label="Menu principal">
+        <button class="nav-item active" data-view="inicio"><span class="nav-icon">◫</span> Visão geral</button>
+        <button class="nav-item" data-view="elenco"><span class="nav-icon">♙</span> Elenco <span class="nav-count" id="squad-count">20</span></button>
+        <button class="nav-item" data-view="taticas"><span class="nav-icon">⌗</span> Táticas</button>
+        <button class="nav-item" data-view="mercado"><span class="nav-icon">⇄</span> Mercado</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="season-tag"><span class="live-dot"></span> TEMPORADA 2025</div><div class="manager-card"><div class="manager-avatar">CM</div><div><b>Caio Martins</b><span>Treinador principal</span></div><span class="more">···</span></div><div class="sidebar-foot">Feito para quem vive futebol <span>⚽</span></div></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar"><div class="mobile-brand"><span class="brand-mark">11</span><b>ONZE<span class="brand-period">.</span></b></div><div class="breadcrumb"><span>ATLÉTICO DO VALE</span><i>/</i><b id="crumb-title">VISÃO GERAL</b></div><div class="top-actions"><div class="top-date"><span class="calendar-icon">▦</span><span id="top-date">SEG, 07 ABR 2025</span></div><button class="icon-button" id="sound-toggle" aria-label="Alternar som">♬</button><button class="manager-chip"><span class="manager-avatar small">CM</span><span>Caio Martins</span><span>⌄</span></button></div></header>
+      <div class="content-wrap">
+        <section class="view active" id="view-inicio"></section>
+        <section class="view" id="view-elenco"></section>
+        <section class="view" id="view-taticas"></section>
+        <section class="view" id="view-mercado"></section>
+      </div>
+    </main>
+  </div>
+  <nav class="mobile-nav" aria-label="Navegação">
+    <button class="active" data-view="inicio"><span>◫</span>Início</button><button data-view="elenco"><span>♙</span>Elenco</button><button data-view="taticas"><span>⌗</span>Táticas</button><button data-view="mercado"><span>⇄</span>Mercado</button>
+  </nav>
+  <div id="modal-root"></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="game.js"></script>
+</body>
+</html>
